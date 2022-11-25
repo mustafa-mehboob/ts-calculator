@@ -1,27 +1,33 @@
 import inquirer from 'inquirer';
 import Chalk from 'chalk'
 
+
+// let chalkRainbow = require('chalk-rainbow')
+
+console.log(Chalk.italic.bold.cyanBright('Welcome to Ghulam Mustafa calculator'));
+
 let value = await inquirer.prompt([
-    {
-        name: "value1",
-        type: "number",
-        message: "Enter Your age",
-    },
-    {
-        name: "value2",
-        type: "number",
-        message: "Enter Your age",
-    },
+    
     {
         name: "sign",
         type: 'list',
-        message: 'Plase slct what you want',
+        message: 'Plase slect what you want',
         choices: [
             "Addition",
             "Multiplication",
             "Division",
             "Subtraction"
         ],
+    },
+    {
+        name: "value1",
+        type: "number",
+        message: "Enter a number",
+    },
+    {
+        name: "value2",
+        type: "number",
+        message: "Enter a second number",
     }
 ]);
 

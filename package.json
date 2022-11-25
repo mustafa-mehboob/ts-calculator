@@ -1,9 +1,12 @@
 {
-  "name": "ts-calculator",
+  "name": "mustafa-calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "mustafa-calculator": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/mustafa-mehboob/ts-calculator#readme",
   "dependencies": {
     "chalk": "^5.1.2",
+    "chalk-rainbow": "^1.0.0",
     "inquirer": "^9.1.4"
   },
   "devDependencies": {
