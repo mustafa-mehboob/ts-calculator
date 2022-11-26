@@ -64,6 +64,7 @@ let repeatFunc = async () => {
             name: "restart",
             message: "Do you want to continue"
         });
+        // console.log(repeat.restart.toLowerCase());
     } while (repeat.restart.toLowerCase() === "y" || repeat.restart.toLowerCase() === "yes");
 };
 repeatFunc();

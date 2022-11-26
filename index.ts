@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+
 import inquirer from 'inquirer';
 import Chalk from 'chalk'
 import chalkAnimation from 'chalk-animation';
@@ -18,7 +19,7 @@ ${chalk.redBright(welMsg3)}
 let func = async () => {
 
     let value = await inquirer.prompt([
-
+        
         {
             name: "sign",
             type: 'list',
@@ -41,29 +42,27 @@ let func = async () => {
             message: "Enter second value",
         }
     ]);
-
-
+    
+    
     (() => {
-        if
-            (!value.value1 || !value.value2) {
-            console.log(Chalk.redBright("Please enter number only"));
-        }
-        else {
-            switch (value.sign) {
-                case "Addition":
-                    console.log(Chalk.blueBright(`${value.value1} + ${value.value2} = ${value.value1 + value.value2}`));
-                    break;
-                case "Multiplication":
-                    console.log(Chalk.greenBright(`${value.value1} * ${value.value2} = ${value.value1 * value.value2}`));
-                    break;
-                case "Division":
-                    console.log(Chalk.blueBright(`${value.value1} / ${value.value2} = ${value.value1 / value.value2}`));
-                    break;
-                default:
-                    console.log(Chalk.yellowBright(`${value.value1} - ${value.value2} = ${value.value1 - value.value2}`));
-                    break;
+            if (!value.value1 || !value.value2) {
+                console.log(Chalk.redBright("Please enter number only"));
+            } else {
+                switch (value.sign) {
+                    case "Addition":
+                        console.log(Chalk.blueBright(`${value.value1} + ${value.value2} = ${value.value1 + value.value2}`));   
+                        break;
+                    case "Multiplication":
+                        console.log(Chalk.greenBright(`${value.value1} * ${value.value2} = ${value.value1 * value.value2}`) );   
+                        break;
+                    case "Division":
+                        console.log(Chalk.blueBright(`${value.value1} / ${value.value2} = ${value.value1 / value.value2}`) );   
+                        break;
+                    default:
+                        console.log(Chalk.yellowBright(`${value.value1} - ${value.value2} = ${value.value1 - value.value2}`));
+                        break;
+                }
             }
-        }
     })()
 }
 
@@ -73,9 +72,11 @@ let repeatFunc = async () => {
         var repeat = await inquirer.prompt({
             type: "input",
             name: "restart",
-            message: "Do you want to continue"
+            message: "Do you want to continue (y/n)"
         })
-    } while (repeat.restart.toLowerCase() === "y" || repeat.restart.toLowerCase() === "yes");
+        // console.log(repeat.restart.toLowerCase());
+        
+    } while (repeat.restart.toLowerCase() === "y" || repeat.restart.toLowerCase() === "yes" );
 }
 
 repeatFunc()
