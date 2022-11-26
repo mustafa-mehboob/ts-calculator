@@ -26,12 +26,12 @@ let func = async () => {
         {
             name: "value1",
             type: "number",
-            message: "Enter a number",
+            message: "Enter first value",
         },
         {
             name: "value2",
             type: "number",
-            message: "Enter a second number",
+            message: "Enter second value",
         }
     ]);
     (() => {
@@ -64,7 +64,6 @@ let repeatFunc = async () => {
             name: "restart",
             message: "Do you want to continue"
         });
-        // console.log(repeat.restart.toLowerCase());
     } while (repeat.restart.toLowerCase() === "y" || repeat.restart.toLowerCase() === "yes");
 };
 repeatFunc();
