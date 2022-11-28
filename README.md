@@ -1,6 +1,9 @@
-CLI Calculator using TypeScript and Node.js
+# Command Line Calculator
 
 
-Run
+command line calculator using [TypeScipt](https://www.typescriptlang.org/), [Node.js](https://nodejs.org/en/) and [Inquirer](https://www.npmjs.com/package/inquirer).
 
-$ npx mustafa-calculator
+
+Run the following command to experience a CLI calculator:
+
+    npx mustafa-calculator
