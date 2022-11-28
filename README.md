@@ -1,4 +1,5 @@
-CLI Calculator using TypeScript and Nodejs
+CLI Calculator using TypeScript and Node.js
+
 
 Run
 
